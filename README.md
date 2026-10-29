@@ -43,3 +43,14 @@ Run it: open `index.html` in a browser (or any static server).
 ---
 
 Day 3 of 100 💻❤️ · Made by [@hack.n.code](https://instagram.com/hack.n.code)
+
+
+## 🆕 v2: 3 levels + a proposal ending 💍
+
+- **Level 1 · City Nights 🏙️**: collect 10 hearts across the starry pixel city.
+- **Level 2 · Rainy Bridge 💕**: pixel rain, a lamp-lit bridge over the water, more 💔 clouds and **moving platforms** you can land on.
+- **Level 3 · Moon Rooftop 🌙**: a rooftop under a giant moon with fairy lights and a **final boss**: a huge heartbreak cloud with an HP bar. Every heart you collect flies up and hits it.
+- **Level cards** ("LEVEL 2 💕") between levels, plus **level select** (LV1 / LV2 / LV3) on the start screen. Levels unlock as you clear them.
+- After the boss: the finale (Player 2 appears, giant heart, fireworks, love letter, card).
+- **New ending surprise:** tap "💍 ONE MORE THING…" and the boy kneels with a pixel ring box. **"WILL YOU BE MY PLAYER 2 FOREVER? 💍"** with YES / NO. The **NO button runs away** from your finger 🙈. **YES** starts a big pixel fireworks show and confetti hearts that **spell her name**.
+- `?demo=1` now auto-plays all 3 levels, the finale and the proposal.
