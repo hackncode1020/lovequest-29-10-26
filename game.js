@@ -97,7 +97,7 @@ function reset() {
 }
 const pad6 = n => String(Math.max(0, n | 0)).padStart(6, '0');
 function hud() {
-  $('hc').textContent = hearts; $('sc').textContent = pad6(score); $('hs').textContent = pad6(hi);
+  $('hc').textContent = hearts; if ($('hg')) $('hg').textContent = LV[lv].goal; if ($('lvl')) $('lvl').textContent = 'LV ' + (lv + 1); $('sc').textContent = pad6(score); $('hs').textContent = pad6(hi);
   const p = Math.min(100, hearts / LV[lv].goal * 100); $('fill').style.width = p + '%'; $('pct').textContent = Math.round(p) + '%';
 }
 
