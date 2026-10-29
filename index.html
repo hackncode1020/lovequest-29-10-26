@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover,user-scalable=no">
+<meta name="theme-color" content="#0d0726">
+<title>Love Quest 🎮❤️ · Player 2 has joined your life</title>
+<meta name="description" content="A tiny 8-bit love game. Collect 10 hearts to unlock Player 2. Made by @hack.n.code">
+<meta property="og:title" content="Love Quest 🎮❤️">
+<meta property="og:description" content="Collect 10 hearts to unlock Player 2 ❤️">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="hud">
+    <div class="hudrow">
+      <div class="logo">LOVE<span>QUEST</span></div>
+      <div class="stat" id="hearts">❤ <b id="hc">0</b>/10</div>
+      <div class="stat" id="score">SCORE <b id="sc">000000</b></div>
+      <button id="music" class="pbtn icon" aria-label="Music on/off">♪</button>
+    </div>
+    <div class="hudrow2">
+      <span class="lvl">LV 1</span>
+      <div id="bar"><div id="fill"></div><div id="segs"></div></div>
+      <span class="lvl" id="pct">0%</span>
+    </div>
+  </header>
+
+  <main id="stage">
+    <canvas id="game"></canvas>
+
+    <section id="start" class="ov show">
+      <div class="title"><span class="t1">LOVE</span><span class="t2">QUEST</span></div>
+      <div class="tag">an 8-bit love story</div>
+      <div class="hi">HI-SCORE <b id="hs">000000</b></div>
+      <label class="namebox">PLAYER 2 NAME<input id="name" maxlength="16" autocomplete="off" spellcheck="false"></label>
+      <button id="go" class="pbtn big blink">PRESS START</button>
+      <div class="hint">TAP / ↑ to jump · ◀ ▶ to move<br>collect 10 ❤ · dodge 💔 clouds</div>
+    </section>
+
+    <div id="banner" class="ov2">
+      <div class="b1">PLAYER 2</div>
+      <div class="b2">HAS JOINED YOUR LIFE ❤️</div>
+      <div class="b3" id="bname">my love</div>
+    </div>
+
+    <section id="letter" class="ov">
+      <div class="scroll">
+        <div class="rod"></div>
+        <div class="paper" id="paper">
+          <div class="lc">💖 LEVEL COMPLETE 💖</div>
+          <div class="ltxt">
+            <p>Dear <b class="nm">my love</b>,</p>
+            <p>I played a thousand levels, but every path led to you. You are my extra life, my favourite save point and my all-time high score.</p>
+            <p>Game over for everyone else. It's always you. 💖</p>
+            <p class="sig">— Player 1</p>
+          </div>
+          <div class="final">FINAL SCORE <b id="fs">0</b> <span id="newhi">NEW HI!</span></div>
+          <div class="lbtns">
+            <button id="again" class="pbtn">↻ PLAY AGAIN</button>
+            <button id="share" class="pbtn wa">SHARE 💬</button>
+            <button id="card" class="pbtn pink">⬇ LOVE CARD</button>
+          </div>
+        </div>
+        <div class="rod"></div>
+      </div>
+    </section>
+  </main>
+
+  <nav id="pad">
+    <button class="pbtn ctl" id="left" aria-label="Left">◀</button>
+    <button class="pbtn ctl jump" id="jump">JUMP ▲</button>
+    <button class="pbtn ctl" id="right" aria-label="Right">▶</button>
+  </nav>
+  <footer>Made by <a href="https://instagram.com/hack.n.code" target="_blank" rel="noopener">@hack.n.code</a></footer>
+</div>
+
+<div id="modal">
+  <div class="mbox">
+    <div class="mt">YOUR LOVE CARD 💖</div>
+    <img id="cardimg" alt="Love card">
+    <div class="mbtns">
+      <a id="dla" class="pbtn pink" download="love-quest-card.png">⬇ DOWNLOAD PNG</a>
+      <button id="mclose" class="pbtn">CLOSE</button>
+    </div>
+  </div>
+</div>
+<script src="game.js"></script>
+</body>
+</html>
