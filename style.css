@@ -82,3 +82,32 @@ footer a{color:var(--pink2);text-decoration:none}
   .ctl{height:42px}#pad{padding:7px 12px}
 }
 @media (max-width:370px){.stat{font-size:8px}.logo{font-size:9px}#score b{letter-spacing:-1px}}
+
+/* ---- v2: levels + proposal ---- */
+.lvrow{display:flex;gap:6px;justify-content:center;margin:8px 0 2px;flex-wrap:wrap}
+.lvb{font:9px/1 "Press Start 2P",monospace;color:#fff;background:#2a1258;border:2px solid #ff9cc2;border-radius:6px;padding:7px 7px;cursor:pointer}
+.lvb:disabled{opacity:.45;border-color:#6d6890}
+#lvcard{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;background:rgba(11,6,40,.72);opacity:0;pointer-events:none;transition:opacity .35s;z-index:6;text-align:center}
+#lvcard.show{opacity:1}
+#lvcard u{text-decoration:none;font:10px "Press Start 2P",monospace;color:#5ef2ff}
+#lvcard b{font:26px "Press Start 2P",monospace;color:#ffd34e;text-shadow:3px 3px 0 #c2185b;transform:scale(.6);transition:transform .45s cubic-bezier(.2,1.6,.4,1)}
+#lvcard.show b{transform:scale(1)}
+#lvcard i{font-style:normal;font:13px "Press Start 2P",monospace;color:#ff9cc2;letter-spacing:1px}
+#prop{position:absolute;inset:0;z-index:7;pointer-events:none;opacity:0;transition:opacity .4s;overflow:hidden}
+#prop.show{opacity:1;pointer-events:auto}
+#prop .pq{position:absolute;left:4%;right:4%;top:14%;text-align:center;font:15px/1.6 "Press Start 2P",monospace;color:#fff;text-shadow:3px 3px 0 #c2185b;background:rgba(11,6,40,.55);border:3px solid #ff9cc2;border-radius:10px;padding:12px 8px}
+#prop .pbtns{position:absolute;left:0;right:0;top:44%;display:flex;justify-content:center;gap:22px}
+.pb{font:13px "Press Start 2P",monospace;border:3px solid #1b1030;border-radius:8px;padding:12px 16px;cursor:pointer;box-shadow:0 4px 0 #1b1030;white-space:nowrap}
+.pb.y{background:#ff4f8b;color:#fff;transition:transform .25s;animation:pyl 1s infinite}
+.pb.n{background:#d9ccff;color:#1b1030;transition:left .18s,top .18s}
+@keyframes pyl{50%{box-shadow:0 4px 0 #1b1030,0 0 22px #ff4f8b}}
+#prop .py,#prop .pend{display:none}
+#prop.yes .pq,#prop.yes .pbtns{display:none}
+#prop.yes .py{display:flex;flex-direction:column;align-items:center;gap:10px;position:absolute;left:0;right:0;top:36%;text-align:center;animation:pin .6s cubic-bezier(.2,1.6,.4,1)}
+#prop .py b{font:21px "Press Start 2P",monospace;color:#ffd34e;text-shadow:3px 3px 0 #c2185b}
+#prop .py i{font-style:normal;font:11px "Press Start 2P",monospace;color:#fff;text-shadow:2px 2px 0 #1b1030}
+#prop.end .pend{display:flex;position:absolute;left:0;right:0;top:52%;justify-content:center;gap:6px;flex-wrap:wrap;padding:0 6px}
+#prop .pend .pb{font-size:9px;padding:9px 8px;background:#2a1258;color:#fff;border-color:#ff9cc2}
+@keyframes pin{from{transform:scale(.3);opacity:0}}
+.ringbtn{font:10px "Press Start 2P",monospace;background:#ffd34e;color:#1b1030;border:3px solid #1b1030;border-radius:8px;padding:10px 10px;cursor:pointer;animation:pyl 1s infinite;margin:4px}
+@media (max-height:680px){#prop .pq{font-size:12px;top:10%}.pb{font-size:11px;padding:10px 12px}#prop .py b{font-size:17px}#lvcard b{font-size:21px}}
